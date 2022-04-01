@@ -8,6 +8,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
   - [metricbeat-playbook.yml](Ansible/metricbeat-playbook.yml.txt)
   - [filebeat-playbook.yml](Ansible/filebeat-playbook.yml.txt)
+  - [install-elk.yml](Ansible/install-elk.yml.txt)
+  - [pentest.yml](Ansible/pentest.yml.txt)
 
 This document contains the following details:
 - Description of the Topologu
@@ -22,15 +24,15 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics.
 - _TODO: What does Filebeat watch for?_
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 | Name                 | Function                   | IP Address | Operating System |
 |----------------------|----------------------------|------------|------------------|
