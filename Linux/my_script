@@ -1,0 +1,10 @@
+#!/bin/bash
+name="Joe"
+echo "Hello $name."
+echo -e "\This is my script.\n"
+echo -e "The files in $PWD are: \n$(ls)"
+echo -e "\Copying the passwd file to your current directory.\n"
+cp /etc/passwd $PWD
+echo -e "The file in $PWD are now: \n$(ls)"
+echo " "
+echo "Ba bye"
