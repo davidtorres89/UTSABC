@@ -114,7 +114,8 @@ SSH into the control node and follow the steps below:
 	- $ ansible-playbook /etc/Ansible/filebeat-playbook.yml
 	- $ ansible-playbook /etc/Ansible/metricbeat-playbook.yml
 
-In order for the playbooks to install in the correct locations, 
-the [hosts](Ansible/hosts) file was used to direct to the correct webservers and Elk machines.
+In order for the [pentest.yml](Ansible/pentest.yml) and [install-elk.yml](Ansible/install-elk.yml) playbooks to install in the correct locations, 
+the [hosts](Ansible/hosts) file was used to direct to the correct webservers and Elk machine.
+
 
 
