@@ -117,5 +117,16 @@ SSH into the control node and follow the steps below:
 In order for the [pentest.yml](Ansible/pentest.yml) and [install-elk.yml](Ansible/install-elk.yml) playbooks to install in the correct locations, 
 the [hosts](Ansible/hosts) file was used to direct to the correct webservers and Elk machine.
 
+Below are screenshots of the playbooks ran along with Azure NSG, Virtual Newtorks, Elk machine and 3 webmachines.
 
+
+![](Images/DVWA-web.png)
+![](Images/Elk-NSG.png)
+![](Images/ElkVnet.png)
+![](Images/Kibana-filebeat-metricbeat.png)
+![](Images/LoadBalancer.png)
+![](Images/RedTeam-NSG.png)
+![](Images/RedTeamVnet.png)
+![](Images/Virtual-Machines.png)
+![](Images/Virtual-Networks.png)
 
