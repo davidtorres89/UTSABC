@@ -49,8 +49,10 @@ Only the Jump-Box-Provisioner and Elk machine can accept connections from the In
 - My Public IP Address
 
 Machines within the network can only be accessed by Jump-Box-Provisioner.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
-
+ - Which machine did you allow to access your ELK VM? 
+    Jump-Box-Provisioner
+ - What was its IP address?
+    13.89.56.10
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
@@ -75,7 +77,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![alt text2](Images/elk container docker ps -a.png)
+![alt text](Images/elk container docker ps -a.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -104,4 +106,3 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
