@@ -92,8 +92,8 @@ These Beats allow us to collect the following information from each machine:
  - Filebeat parses and forwards system logs from the Web VMs to the ELK Stack in an easy to read format.
  - Metricbeat reports system and service statistics about the Web VMs to the ELK stack VM.
 
-### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+### Using the Playbooks
+In order to use the playbooks, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
  - Copy the follwing playbooks into `/etc/Ansible/`
@@ -106,17 +106,15 @@ SSH into the control node and follow the steps below:
  	- [metricbeat-playbook.yml](Ansible/metricbeat-playbook.yml)
 
 
-- Update the host file to include IP address of your Virtual Machines
-- Run the playbook, and navigate to `http://[yourloadbalancerip]/setup.php` to check that the installation worked as expected.
+ - Update the host file to include IP address of your Virtual Machines
+ - Run the playbook, and navigate to `http://[yourloadbalancerip]/setup.php` to check that the  installation worked as expected.
 
 	- $ ansible-playbook /etc/Ansible/pentest.yml
 	- $ ansible-playbook /etc/Ansible/install-elk.yml
 	- $ ansible-playbook /etc/Ansible/filebeat-playbook.yml
 	- $ ansible-playbook /etc/Ansible/metricbeat-playbook.yml
 
+In order for the playbooks to install in the correct locations, 
+the [hosts](Ansible/hosts) file was used to direct to the correct webservers and Elk machines.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
 
