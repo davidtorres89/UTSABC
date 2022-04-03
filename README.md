@@ -100,7 +100,7 @@ SSH into the control node and follow the steps below:
 - Update the host file to include IP address of your Virtual Machines
 - Run the playbook, and navigate to `http://[yourloadbalancerip]/setup.php` to check that the installation worked as expected.
 
-      - `$ ansible-playbook install /etc/Ansible/install-elk.yml
+      - `$ ansible-playbook install /etc/Ansible/install-elk.yml`
 
 
 _TODO: Answer the following questions to fill in the blanks:_
