@@ -28,9 +28,8 @@ Load balancing ensures that the application will be highly available, in additio
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
-
+- Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
+- _Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 The configuration details of each machine may be found below.
 
 
@@ -65,7 +64,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+ - You can orchestrate the entire application environment no matter where it's deployed.
 
 The playbook implements the following tasks:
  - Configure maximum mapped memory with sysctl module
@@ -80,13 +79,17 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+ - Web-1: 10.0.0.8
+ - Web-2: 10.0.0.9
+ - Web-3: 10.0.0.10
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+ - Filebeat
+ - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+ - Filebeat parses and forwards system logs from the Web VMs to the ELK Stack in an easy to read format.
+ - Metricbeat reports system and service statistics about the Web VMs to the ELK stack VM.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
