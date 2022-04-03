@@ -25,7 +25,6 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics.
 - Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
@@ -97,9 +96,12 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the pentest.yml file to /etc/ansible.
+- Copy the `pentest.yml` file to `/etc/ansible`
 - Update the host file to include IP address of your Virtual Machines
-- Run the playbook, and navigate to http://[yourloadbalancerip]/setup.php to check that the installation worked as expected.
+- Run the playbook, and navigate to `http://[yourloadbalancerip]/setup.php` to check that the installation worked as expected.
+
+      - `$ ansible-playbook install /etc/Ansible/install-elk.yml
+
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
