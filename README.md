@@ -103,13 +103,16 @@ SSH into the control node and follow the steps below:
 
  - Copy the following playbooks into `/etc/Ansible/Roles/`
 	- [filebeat-playbook.yml](Ansible/filebeat-playbook.yml) 
- 	- [install-elk.yml](Ansible/install-elk.yml)
+ 	 [metricbeat-playbook.yml](Ansible/metricbeat-playbook.yml)
 
 
 - Update the host file to include IP address of your Virtual Machines
 - Run the playbook, and navigate to `http://[yourloadbalancerip]/setup.php` to check that the installation worked as expected.
 
-      - $ ansible-playbook install /etc/Ansible/install-elk.yml
+	- $ ansible-playbook /etc/Ansible/pentest.yml
+	- $ ansible-playbook /etc/Ansible/install-elk.yml
+	- $ ansible-playbook /etc/Ansible/filebeat-playbook.yml
+	- $ ansible-playbook /etc/Ansible/metricbeat-playbook.yml
 
 
 _TODO: Answer the following questions to fill in the blanks:_
