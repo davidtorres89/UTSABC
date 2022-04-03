@@ -96,8 +96,16 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the [pentest.yml](Ansible/pentest.yml) file to `/etc/ansible`
-- Copy the `
+ - Copy the follwing playbooks into `/etc/Ansible/`
+	- [pentest.yml](Ansible/pentest.yml)
+	- [install-elk.yml](Ansible/install-elk.yml)
+ 
+
+ - Copy the following playbooks into `/etc/Ansible/Roles/`
+	- [filebeat-playbook.yml](Ansible/filebeat-playbook.yml) 
+ 	- [install-elk.yml](Ansible/install-elk.yml)
+
+
 - Update the host file to include IP address of your Virtual Machines
 - Run the playbook, and navigate to `http://[yourloadbalancerip]/setup.php` to check that the installation worked as expected.
 
