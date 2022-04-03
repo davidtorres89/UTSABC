@@ -103,7 +103,7 @@ SSH into the control node and follow the steps below:
 
  - Copy the following playbooks into `/etc/Ansible/Roles/`
 	- [filebeat-playbook.yml](Ansible/filebeat-playbook.yml) 
- 	 [metricbeat-playbook.yml](Ansible/metricbeat-playbook.yml)
+ 	- [metricbeat-playbook.yml](Ansible/metricbeat-playbook.yml)
 
 
 - Update the host file to include IP address of your Virtual Machines
