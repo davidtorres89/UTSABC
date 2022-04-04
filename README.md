@@ -32,13 +32,13 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 
 
-| Name                 | Function                   | IP Address | Operating System |
-|----------------------|----------------------------|------------|------------------|
-| Jump-Box-Provisioner | Gateway                    | 10.0.0.1   | Ubuntu LTS 18.04 |
-| Elk                  |   Application Server       | 10.1.0.4   | Ubuntu LTS 18.04 |
-| Web-1                |   Application Server       | 10.0.0.8   | Ubuntu LTS 18.04 |
-| Web 2                |   Application Server       | 10.0.0.9   | Ubuntu LTS 18.04 |
-| Web-3                |   Application Server       | 10.0.0.10  | Ubuntu LTS 18.04 |
+| Name                 | Function         | IP Address | Operating System |
+|----------------------|------------------|------------|------------------|
+| Jump-Box-Provisioner |   Gateway        | 10.0.0.1   | Ubuntu LTS 18.04 |
+| Elk                  |   Web Server     | 10.1.0.4   | Ubuntu LTS 18.04 |
+| DVWA-1               |   Web Server     | 10.0.0.8   | Ubuntu LTS 18.04 |
+| DVWA 2               |   Web Server     | 10.0.0.9   | Ubuntu LTS 18.04 |
+| DVWA-3               |   Monitoring     | 10.0.0.10  | Ubuntu LTS 18.04 |
 
 ### Access Policies
 
@@ -46,6 +46,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-Box-Provisioner and Elk machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - My Public IP Address
+	- 70.94.155.193
 
 Machines within the network can only be accessed by Jump-Box-Provisioner.
  - Which machine did you allow to access your ELK VM? 
@@ -65,7 +66,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
- - You can orchestrate the entire application environment no matter where it's deployed.
+ - You can run the entire application environment no matter where it's deployed.
 
 The playbook implements the following tasks:
  - Configure maximum mapped memory with sysctl module
@@ -116,6 +117,8 @@ SSH into the control node and follow the steps below:
 
 In order for the [pentest.yml](Ansible/pentest.yml) and [install-elk.yml](Ansible/install-elk.yml) playbooks to install in the correct locations, 
 the [hosts](Ansible/hosts) file was used to direct to the correct webservers and Elk machine.
+
+ - To veify the elk machine is running, run: `curl http://10.0.0.8:5601.` This is the address of Kibana. If the installation succeeded, this command should print HTML to the console.
 
 Below are screenshots of the playbooks ran along with Azure NSG, Virtual Newtorks, Elk machine and 3 webmachines.
 
